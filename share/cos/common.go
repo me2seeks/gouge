@@ -16,5 +16,4 @@ func InterruptContext() context.Context {
 		cancel()
 	}()
 	return ctx
-
 }
