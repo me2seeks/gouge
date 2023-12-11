@@ -41,3 +41,7 @@ func (l *Logger) Debugf(f string, args ...interface{}) {
 		l.logger.Printf(l.prefix+": "+f, args...)
 	}
 }
+
+func (l *Logger) Errorf(f string, args ...interface{}) error {
+	return fmt.Errorf(l.prefix+": "+f, args...)
+}
