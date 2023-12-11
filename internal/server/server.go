@@ -31,8 +31,8 @@ type Server struct {
 
 var upgrader = websocket.Upgrader{
 	CheckOrigin:     func(r *http.Request) bool { return true },
-	ReadBufferSize:  0,
-	WriteBufferSize: 0,
+	ReadBufferSize:  1024,
+	WriteBufferSize: 1024,
 }
 
 func NewServer(Config *Config) (*Server, error) {
